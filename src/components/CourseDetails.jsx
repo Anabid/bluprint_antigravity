@@ -6,7 +6,7 @@ const CourseDetails = () => {
   return (
     <section id="courses" className="bg-alt">
       <div className="container">
-        <div className="text-center" style={{ marginBottom: '5rem' }}>
+        <div className="text-center section-header-block">
           <span className="badge">Program Architecture</span>
           <h2 className="text-primary">IBA & BUP Admission Course</h2>
           <p>Our 32-topic pedagogical structure is meticulously updated for real exam rigor.</p>
@@ -33,7 +33,7 @@ const CourseDetails = () => {
           </div>
         </div>
 
-        <div className="syllabus-cta text-center" style={{ marginTop: '6rem' }}>
+        <div className="syllabus-cta text-center">
           <h3 className="text-primary">Master Our 32-Topic Blueprint</h3>
           <p style={{ maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
             Get access to our standardized course outline designed to bridge the gap between high school potential and IBA elite standards.
@@ -112,12 +112,33 @@ const CourseDetails = () => {
           font-weight: 500;
         }
 
+        .syllabus-cta {
+          margin-top: 6rem;
+        }
+
         @media (max-width: 768px) {
           .course-breakdown {
             grid-template-columns: 1fr;
           }
           .syllabus-table th, .syllabus-table td {
             padding: 1rem;
+          }
+          .syllabus-cta {
+            margin-top: 3rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .details-list li {
+            gap: 0.75rem;
+            font-size: 0.875rem;
+          }
+          .details-list li span {
+            font-size: 1.25rem;
+            min-width: 2rem;
+          }
+          .syllabus-cta {
+            margin-top: 2.5rem;
           }
         }
       `}} />

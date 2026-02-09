@@ -131,10 +131,42 @@ const Team = () => {
                 }
 
                 @media (max-width: 768px) {
+                    .team-section {
+                        padding: 4rem 0;
+                    }
+                    .section-header {
+                        margin-bottom: 2.5rem;
+                    }
                     .team-grid {
                         grid-template-columns: 1fr;
                         max-width: 400px;
                         margin: 0 auto;
+                        gap: 1.5rem;
+                    }
+                    .team-overlay {
+                        opacity: 1;
+                        padding: 1.25rem;
+                    }
+                }
+
+                @media (max-width: 480px) {
+                    .team-section {
+                        padding: 3rem 0;
+                    }
+                    .team-card {
+                        border-radius: 1rem;
+                    }
+                    .team-overlay {
+                        padding: 1rem;
+                    }
+                    .team-info h3 {
+                        font-size: 1rem;
+                    }
+                    .team-info p {
+                        font-size: 0.8rem;
+                    }
+                    .subtitle {
+                        font-size: 0.95rem;
                     }
                 }
             `}} />

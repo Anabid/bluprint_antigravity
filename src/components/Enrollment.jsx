@@ -5,7 +5,7 @@ const Enrollment = () => {
   return (
     <section id="enrollment">
       <div className="container">
-        <div className="text-center" style={{ marginBottom: '5rem' }}>
+        <div className="text-center section-header-block">
           <span className="badge">Hybrid Presence</span>
           <h2 className="text-primary">Enrolment Modes & Pricing</h2>
           <p>Online and offline modes receive equal brand weight, ensuring the same "Real Exam Rigor" for every student.</p>
@@ -153,6 +153,35 @@ const Enrollment = () => {
           .enrollment-grid {
             grid-template-columns: 1fr !important;
             gap: 3rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .pricing-card {
+            padding: 2rem 1.5rem;
+          }
+          .mode-badge {
+            top: 1rem;
+            right: 1rem;
+            font-size: 0.625rem;
+            padding: 0.3rem 0.75rem;
+          }
+          .current-price {
+            font-size: 2.5rem;
+          }
+          .old-price {
+            font-size: 1rem;
+          }
+          .price-tag {
+            margin: 1.5rem 0 2rem 0;
+            padding: 1.25rem;
+          }
+          .perks-list li {
+            gap: 0.75rem;
+            font-size: 0.85rem;
+          }
+          .perks-list {
+            margin-bottom: 2rem;
           }
         }
       `}} />

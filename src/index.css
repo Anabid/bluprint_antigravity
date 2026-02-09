@@ -138,12 +138,60 @@ p {
     font-size: 2.25rem;
   }
 
+  section {
+    padding: 3.5rem 0;
+  }
+
   .grid-3x2 {
     grid-template-columns: 1fr;
+  }
+
+  .grid {
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding: 1.75rem;
+  }
+
+  .section-header-block {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .syllabus-table th,
+  .syllabus-table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.8rem;
   }
 }
 
 /* Utilities */
+.section-header-block {
+  margin-bottom: 5rem;
+}
+
 .text-center {
   text-align: center !important;
 }

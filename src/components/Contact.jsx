@@ -32,13 +32,13 @@ const Contact = () => {
   return (
     <section id="contact">
       <div className="container">
-        <div className="text-center" style={{ marginBottom: '5rem' }}>
+        <div className="text-center section-header-block">
           <span className="badge">Connect With Us</span>
           <h2 className="text-primary">Visit Our Hubs</h2>
           <p>Experience our supportive learning environment firsthand at any of our four hubs.</p>
         </div>
 
-        <div className="grid hub-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)', marginBottom: '6rem' }}>
+        <div className="grid hub-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
           {hubs.map((hub) => (
             <div key={hub.name} className="hub-card-wrapper">
               <a
@@ -119,6 +119,10 @@ const Contact = () => {
 
       <style dangerouslySetInnerHTML={{
         __html: `
+        .hub-grid {
+          margin-bottom: 6rem;
+        }
+
         .hub-card {
           text-align: center;
           padding: 1.5rem !important;
@@ -262,9 +266,41 @@ const Contact = () => {
           }
         }
 
+        @media (max-width: 768px) {
+          .hub-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            margin-bottom: 3rem;
+          }
+          .contact-footer-group {
+            gap: 2.5rem;
+          }
+        }
+
         @media (max-width: 600px) {
           .hub-grid {
             grid-template-columns: 1fr !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .hub-card {
+            padding: 1rem !important;
+          }
+          .cta-final h2 {
+            font-size: 2rem;
+          }
+          .cta-final p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+          }
+          .method {
+            gap: 1rem;
+          }
+          .method-value {
+            font-size: 0.95rem;
+          }
+          .contact-methods {
+            gap: 1.5rem;
           }
         }
       `}} />

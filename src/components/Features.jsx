@@ -38,7 +38,7 @@ const Features = () => {
     return (
         <section id="why-choose-us" className="bg-alt">
             <div className="container">
-                <div className="text-center" style={{ marginBottom: '5rem' }}>
+                <div className="text-center section-header-block">
                     <span className="badge">Why Blueprint?</span>
                     <h2 className="text-primary">Bridging Potential and Performance</h2>
                     <p style={{ maxWidth: '650px', margin: '0 auto' }}>

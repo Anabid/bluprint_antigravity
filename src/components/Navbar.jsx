@@ -281,6 +281,29 @@ const Navbar = () => {
           }
           .navbar__hamburger {
             display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 44px;
+            min-height: 44px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .navbar {
+            padding: 0.75rem 0;
+          }
+          .navbar--scrolled {
+            padding: 0.5rem 0;
+          }
+          .navbar__theme-btn {
+            width: 2rem;
+            height: 2rem;
+          }
+          .mobile-nav__link {
+            font-size: 1.25rem;
+          }
+          .mobile-nav__links {
+            gap: 1.5rem;
           }
         }
       `}} />

@@ -7,7 +7,7 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="container">
-        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '4rem' }}>
+        <div className="hero-logo-wrap">
           <Logo size="lg" />
         </div>
 
@@ -34,6 +34,12 @@ const Hero = () => {
 
       <style dangerouslySetInnerHTML={{
         __html: `
+        .hero-logo-wrap {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 4rem;
+        }
+
         .hero {
           padding-top: 7rem;
           padding-bottom: 6rem;
@@ -88,11 +94,43 @@ const Hero = () => {
         }
 
         @media (max-width: 768px) {
+          .hero {
+            padding-top: 5rem;
+            padding-bottom: 3rem;
+          }
+          .hero-logo-wrap {
+            margin-bottom: 2.5rem;
+          }
+          .hero-subtitle {
+            font-size: 1rem;
+          }
+          .cta-group {
+            margin-bottom: 3rem;
+          }
+          .university-logos {
+            padding-top: 2.5rem;
+          }
           .logos-grid {
             gap: 1.5rem 2.5rem;
           }
           .uni-item {
             font-size: 1.125rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .hero {
+            padding-top: 4.5rem;
+            padding-bottom: 2rem;
+          }
+          .logos-grid {
+            gap: 1rem 1.5rem;
+          }
+          .uni-item {
+            font-size: 1rem;
+          }
+          .cta-group {
+            margin-bottom: 2rem;
           }
         }
       `}} />

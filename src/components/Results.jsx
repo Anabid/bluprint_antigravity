@@ -161,6 +161,7 @@ const Results = () => {
           .res-flex {
             flex-direction: column;
             text-align: center;
+            gap: 3rem;
           }
           .res-stats {
             justify-content: center;
@@ -168,6 +169,21 @@ const Results = () => {
           .res-image {
             width: 100%;
             max-width: 500px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .res-flex {
+            gap: 2rem;
+          }
+          .res-stats {
+            gap: 2rem;
+          }
+          .stat-num {
+            font-size: 2.25rem;
+          }
+          .flyer-gallery {
+            border-radius: 1rem;
           }
         }
       `}} />

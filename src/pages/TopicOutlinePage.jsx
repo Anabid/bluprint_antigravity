@@ -46,7 +46,7 @@ const TopicOutlinePage = () => {
 
   return (
     <div className="page-wrapper">
-      <header className="page-header container" style={{ padding: '2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+      <header className="page-header container">
         <Link to="/" style={{ textDecoration: 'none' }}>
           <Logo />
         </Link>
@@ -57,7 +57,7 @@ const TopicOutlinePage = () => {
 
       <section className="syllabus-page-content">
         <div className="container">
-          <div className="text-center" style={{ marginBottom: '5rem' }}>
+          <div className="text-center section-header-block">
             <span className="badge">Academic Mastery</span>
             <h1 className="text-primary">Standardized 32-Topic Outline</h1>
             <p style={{ maxWidth: '700px', margin: '0 auto' }}>
@@ -161,11 +161,48 @@ const TopicOutlinePage = () => {
           color: var(--primary) !important;
         }
 
+        .page-header {
+          padding: 2rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
         @media (max-width: 768px) {
+          .syllabus-page-content {
+            padding-top: 2rem;
+            padding-bottom: 4rem;
+          }
           .syllabus-table th, .syllabus-table td {
             padding: 1rem 1.5rem;
           }
           h1 { font-size: 2.5rem; }
+        }
+
+        @media (max-width: 480px) {
+          .page-header {
+            padding: 1.25rem;
+            gap: 1rem;
+          }
+          .syllabus-page-content {
+            padding-top: 1.5rem;
+            padding-bottom: 3rem;
+          }
+          .syllabus-table th, .syllabus-table td {
+            padding: 0.625rem 0.5rem;
+            font-size: 0.75rem;
+          }
+          .syllabus-table th {
+            font-size: 0.65rem;
+          }
+          .btn-outline {
+            padding: 0.5rem 1rem !important;
+            font-size: 0.75rem;
+          }
+          .table-container {
+            border-radius: 1rem;
+          }
+          h1 { font-size: 1.75rem; }
         }
       `}} />
     </div>

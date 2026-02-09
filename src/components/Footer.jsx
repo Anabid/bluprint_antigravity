@@ -108,10 +108,28 @@ const Footer = () => {
           }
         }
 
+        @media (max-width: 768px) {
+          .footer {
+            padding: 3rem 0 0 0;
+          }
+          .footer-content {
+            margin-bottom: 3rem;
+          }
+        }
+
         @media (max-width: 600px) {
           .footer-links {
             flex-direction: column;
-            gap: 3rem;
+            gap: 2rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .link-group h4 {
+            margin-bottom: 1rem;
+          }
+          .link-group a {
+            margin-bottom: 0.75rem;
           }
         }
       `}} />
