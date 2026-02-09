@@ -2,7 +2,7 @@ import React from 'react';
 
 const Logo = ({ size = "md" }) => {
     // We'll use CSS to toggle between the two logo versions based on the theme
-    const height = size === "lg" ? "140px" : "90px";
+    const height = size === "lg" ? "140px" : size === "sm" ? "50px" : "90px";
 
     return (
         <div className="logo-container" style={{ display: 'flex', alignItems: 'center' }}>

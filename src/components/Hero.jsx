@@ -7,9 +7,9 @@ const Hero = () => {
   return (
     <section className="hero">
       <div className="container">
-        <nav style={{ marginBottom: '6rem', display: 'flex', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '4rem' }}>
           <Logo size="lg" />
-        </nav>
+        </div>
 
         <div className="hero-content text-center">
           <span className="badge">IBA & BBA ADMISSION 2024-25</span>
@@ -35,7 +35,7 @@ const Hero = () => {
       <style dangerouslySetInnerHTML={{
         __html: `
         .hero {
-          padding-top: 4rem;
+          padding-top: 7rem;
           padding-bottom: 6rem;
           background: radial-gradient(circle at top right, rgba(30, 64, 175, 0.1), transparent 45%),
                       radial-gradient(circle at bottom left, rgba(30, 64, 175, 0.05), transparent 40%);

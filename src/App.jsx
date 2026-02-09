@@ -8,7 +8,7 @@ import CourseDetails from './components/CourseDetails'
 import Enrollment from './components/Enrollment'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import ThemeToggle from './components/ThemeToggle'
+import Navbar from './components/Navbar'
 import TopicOutlinePage from './pages/TopicOutlinePage'
 
 // ScrollToTop component to reset scroll position on navigation
@@ -44,7 +44,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <ThemeToggle />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/topic-outline" element={<TopicOutlinePage />} />
