@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Caveat:wght@400;700&display=swap');
+
+:root {
+  /* Constant Brand Colors */
+  --primary: #1E40AF;
+  /* Royal Blue */
+  --primary-dark: #1E3A8A;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Dynamic Theme Variables - Default Light */
+  --bg-main: #FFFFFF;
+  --bg-card: #F8FAFC;
+  --bg-alt: #F1F5F9;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+  --border: rgba(15, 23, 42, 0.1);
+  --shadow: rgba(0, 0, 0, 0.1);
+  --badge-bg: rgba(30, 64, 175, 0.1);
+}
+
+[data-theme='dark'] {
+  --bg-main: #000000;
+  --bg-card: #111827;
+  --bg-alt: rgba(31, 41, 55, 0.5);
+  --text-main: #FFFFFF;
+  --text-muted: #94A3B8;
+  --border: rgba(255, 255, 255, 0.05);
+  --shadow: rgba(0, 0, 0, 0.3);
+  --badge-bg: rgba(30, 64, 175, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 6rem 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-main);
+}
+
+h1 {
+  font-size: 3.75rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2.75rem;
+  margin-bottom: 1.25rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.script-font {
+  font-family: 'Caveat', cursive;
+  font-weight: 700;
+}
+
+p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition);
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(30, 64, 175, 0.5);
+}
+
+.grid {
+  display: grid;
+  gap: 2.5rem;
+}
+
+.grid-3x2 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 992px) {
+  .grid-3x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  .grid-3x2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Utilities */
+.text-center {
+  text-align: center !important;
+}
+
+.text-primary {
+  color: var(--primary) !important;
+}
+
+.bg-alt {
+  background-color: var(--bg-alt);
+}
+
+/* Custom components */
+.card {
+  background: var(--bg-card);
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  height: 100%;
+}
+
+.card:hover {
+  border-color: var(--primary);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px var(--shadow);
+}
+
+.icon-box {
+  width: 3.5rem;
+  height: 3.5rem;
+  background: rgba(30, 64, 175, 0.1);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--badge-bg);
+  color: var(--primary);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* Syllabus Table Alignment */
+.table-container {
+  overflow-x: auto;
+  background: var(--bg-card);
+  border-radius: 1.5rem;
+  border: 1px solid var(--border);
+  box-shadow: 0 25px 50px -12px var(--shadow);
+}
+
+.syllabus-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.syllabus-table th,
+.syllabus-table td {
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-main);
+}
+
+.syllabus-table th {
+  background: rgba(30, 64, 175, 0.1);
+  color: var(--primary);
+}
+
+.syllabus-table tr:hover {
+  background: rgba(30, 64, 175, 0.05);
+}
+
+/* Enrollment specific */
+.price-tag {
+  background: var(--bg-alt) !important;
+  border: 1px solid var(--border) !important;
+}
+
+.current-price {
+  color: var(--text-main) !important;
+}
+
+.perks-list li {
+  color: var(--text-main) !important;
+}
